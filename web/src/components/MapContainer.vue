@@ -103,11 +103,11 @@ export default {
           if (!colors[adcode]) {
             const risk = GDPSpeed[adcode];
             if (risk == 0) {
-              colors[adcode] = 'rgb(227,227,227)'
+              colors[adcode] = 'rgb(16,193,162)'
             } else if (risk == 1) {
-              colors[adcode] = 'rgb(245,156,179)'
+              colors[adcode] = 'rgb(255,229,153)'
             } else if (risk == 2) {
-              colors[adcode] = 'rgb(234,57,104)'
+              colors[adcode] = 'rgb(250,92,72)'
             }
           }
           return colors[adcode]
@@ -239,6 +239,7 @@ export default {
         }
 
         function onerror(e) {
+          console.log(e)
           alert('图片加载失败！');
         }
 
@@ -250,7 +251,7 @@ export default {
             lineWidth: 8,
             strokeStyle: 'rgb(51,153,255)',
           },
-          content: PathSimplifier.Render.Canvas.getImageContent("https://i.328888.xyz/2023/01/05/WNR3X.png", onload, onerror),
+          content: PathSimplifier.Render.Canvas.getImageContent('https://s2.loli.net/2023/10/08/BF2R6j4EJIXMLAv.png', onload, onerror),
         },
         {
           //汽车
@@ -260,7 +261,7 @@ export default {
             lineWidth: 8,
             strokeStyle: 'rgb(51,153,255)',
           },
-          content: PathSimplifier.Render.Canvas.getImageContent("https://i.328888.xyz/2023/01/05/WNcSt.png", onload, onerror),
+          content: PathSimplifier.Render.Canvas.getImageContent('https://s2.loli.net/2023/10/08/4CAPrdB8eI6FcsM.png', onload, onerror),
         },
         {
           //火车
@@ -270,7 +271,7 @@ export default {
             lineWidth: 8,
             strokeStyle: 'rgb(51,153,255)',
           },
-          content: PathSimplifier.Render.Canvas.getImageContent('https://i.328888.xyz/2023/01/05/WN3DP.png', onload, onerror),
+          content: PathSimplifier.Render.Canvas.getImageContent('https://s2.loli.net/2023/10/08/io45cvEnWQZs2kl.png', onload, onerror),
         }
         ]
 

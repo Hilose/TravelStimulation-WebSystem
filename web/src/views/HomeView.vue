@@ -183,7 +183,7 @@ export default {
       },
       {
         value: '2',
-        label: '风险最小',
+        label: '拥挤程度最小',
       },
       {
         value: '3',

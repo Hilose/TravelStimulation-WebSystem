@@ -54,7 +54,7 @@ const routes:RouteRecordRaw[] = [
                 path: "/table",
                 name: "basetable",
                 meta: {
-                    title: '疫情风险低管理',
+                    title: '地区拥挤程度管理',
                     author: true,
                 },
                 component: () => import ( /* webpackChunkName: "table" */ "../views/table.vue")

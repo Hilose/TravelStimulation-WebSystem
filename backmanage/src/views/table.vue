@@ -18,7 +18,7 @@
       >
 				<el-table-column prop="cityAdcode" label="城市Adcode" width="150" align="center"></el-table-column>
 				<el-table-column prop="cityName" label="城市名称" align="center"></el-table-column>
-				<el-table-column prop="grade" label="风险等级" align="center"></el-table-column>
+				<el-table-column prop="grade" label="拥挤等级" align="center"></el-table-column>
 				<el-table-column label="操作" width="220" align="center">
 					<template #default="scope">
 						<el-button text :icon="Edit" @click="handleEdit(scope.$index, scope.row)">
@@ -67,12 +67,12 @@
 
 
 		<!-- 编辑弹出框 -->
-		<el-dialog title="修改城市风险等级" v-model="visible" width="27%">
+		<el-dialog title="修改城市拥挤等级" v-model="visible" width="27%">
 			<el-form label-width="70px">
 				<el-form-item label="城市名">
 					<el-input v-model="form.city_name" disabled style="width: 250px"></el-input>
 				</el-form-item>
-				<el-form-item label="风险等级">
+				<el-form-item label="拥挤等级">
           <el-select v-model="form.city_grade" placeholder="Select" style="width: 250px">
             <el-option
                 v-for="item in options"
@@ -120,7 +120,7 @@ let visible = ref(false);
 
 let added_city = reactive({
   city_adcode: '',
-  city_grade: '低风险',
+  city_grade: '低拥挤',
 });
 
 let form = reactive({
@@ -205,8 +205,8 @@ const addCity = () => {
   let grade = added_city.city_adcode;
 
 
-  if(grade === '低风险') grade = "0";
-  else if(grade === '中风险') grade = "1";
+  if(grade === '低拥挤') grade = "0";
+  else if(grade === '中拥挤') grade = "1";
   else grade = "2";
 
    axios({
@@ -242,12 +242,12 @@ const addCity = () => {
 
 const renderCell = (row : any) => {
 
-  if (row.row.grade === '中风险' && row.columnIndex === 2) {
+  if (row.row.grade === '中拥挤' && row.columnIndex === 2) {
 
     return {
       color:'#f86a6f',
     };
-  } else if (row.row.grade === '高风险' && row.columnIndex === 2) {
+  } else if (row.row.grade === '高拥挤' && row.columnIndex === 2) {
 
     return {
       color:'#ff0000',
@@ -259,17 +259,17 @@ const renderCell = (row : any) => {
 getData();
 
 
-const toGrade = ['低风险', '中风险', '高风险'];
+const toGrade = ['低拥挤', '中拥挤', '高拥挤'];
 const options = [
   {
     value: 0,
-    label:'低风险',
+    label:'低拥挤',
   },{
     value: 1,
-    label: '中风险',
+    label: '中拥挤',
   },{
     value: 2,
-    label: '高风险',
+    label: '高拥挤',
   }
 ]
 

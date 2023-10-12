@@ -51,7 +51,7 @@ const items = [
 	{
 		icon: 'el-icon-list',
 		index: '/table',
-		title: '疫情风险地管理',
+		title: '地区拥挤程度管理',
 	},
 	{
 		icon: 'el-icon-list',
