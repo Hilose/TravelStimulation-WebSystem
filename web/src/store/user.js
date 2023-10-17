@@ -81,6 +81,7 @@ export default {
                 }
             });
         },
+        
         logout(context) {
             localStorage.removeItem("jwt_token");
             context.commit("logout");
