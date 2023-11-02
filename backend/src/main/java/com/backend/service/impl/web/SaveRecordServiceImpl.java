@@ -2,10 +2,8 @@ package com.backend.service.impl.web;
 
 import com.alibaba.fastjson.JSONArray;
 import com.backend.mapper.PlanMapper;
-import com.backend.pojo.Path;
 import com.backend.pojo.Plan;
 import com.backend.service.web.SaveRecordService;
-import com.mysql.cj.xdevapi.JsonArray;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -14,6 +14,4 @@ public class City {
     private Integer cityAdcode;
     private String cityName;
     private Integer grade;
-
-
 }
